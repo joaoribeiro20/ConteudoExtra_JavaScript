@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            color:#DECBB0;
+            text-align: center;
+            }
+        body{
+            background-color: #023554;
+            font: normal 15px Arial
+            
+        } 
+        section{
+            background-color:#DECBB0;
+            width: 45%;
+            margin: auto;
+            padding: 15px;
+            border-radius: 10px;
+            border: 5px solid #DECBB0;
+            box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.753);
+
+        }
+        footer{
+            color: #DECBB0;
+            text-align: center;
+            font-style: italic;
+        }
+        div{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercicio</h1>
+    </header>
+    <main>
+        <section>
+
+            <div id="areaInfo">
+                <label for="">Digite seu nome </label>
+                <input id="infoNome" type="text">
+
+                <label for="">Digite um numero </label>
+                <input id="infoNumero" type="text">
+
+                <label for="">Email</label>
+                <input id="infoEmail" type="email">
+                <button onclick="salvar()">Exibir tabuada</button>
+            </div>
+            <div id="areaRes">
+                <table>
+
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; JoaoRibeiro</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
