@@ -8,29 +8,21 @@ const dados = [{}]
 
 function salvar(){
 
-    console.log(validarEmail(emailEntrada))
-    console.log(validarNome(nomeEntrada))
-    console.log(validarNumero(numeroEntrada))
-    
-    //console.log(cont1)
-    //console.log(numeroEntrada.value)
-    //console.log(nomeEntrada.value)
-
-    //console.log(validarNome())
-    //console.log(validarNumero())
-
     //verifica se o returno da funçoes é true, caso as informaçoes estiverrem correta, caso ao contratrio
     //as funçoes returna false
-    /*if(validarNumero() != false && validarNome() != false){
-
-        dados[cont1] = {nome: nomeEntrada.value, numero: numeroEntrada.value}
-        cont1++
+    if(validarNumero(numeroEntrada) != false && validarNome(nomeEntrada) != false && validarEmail(emailEntrada) != false){
+      
+        dados[cont1] = {nome: nomeEntrada.value, numero: numeroEntrada.value, email: emailEntrada.value}
+        cont1++/
         console.log(dados)
         console.log(cont1)
 
     }else{
+        console.log(validarEmail())
+        console.log(validarNome())
+        console.log(validarNumero())
         alert('Dados invalidos')
-    }*/
+    }
     
 }
 
@@ -50,8 +42,19 @@ function validarNumero(numero){
 }
 //verifica se o campo de nome nao esta vazio e tambem verifica se nao contem numero
 function validarNome(nome){
-    if(nome.value != '' && !parseInt(nome.value)){
-        return true
+    
+
+    if(nome.value != '' ){
+        for(let i=0; i <= 9; i++)
+        {
+            if(nome.value.indexOf(i) != -1){
+                console.log('foi encontrado um numero dentro da string/campus nome')
+                return false
+                break
+            }
+        } 
+        console.log('nao foi encontrado nenhum numero dentro da string/campus nome')
+        return true 
         
     }else {
         return false
@@ -60,16 +63,15 @@ function validarNome(nome){
 
 //varifica se o campo de email possui o @ e tambem o .com
 //usar os metodos de string
-//primeiro corta para pegar so a parte final e depois comparar com uma variavel let com = .com
-//equals e para cotar o endsWith() ou substring() juntamento com length
-//str.endsWith(stringSendoBuscada[, tamanho])
 
+function validarEmail(email){
 const dominioCom = '.com'
 const dominioBr = '.br'
 const arroba = '@'
-function validarEmail(email){
-    if(email.value.endsWith(dominioBr) || (email.value.endsWith(dominioCom))){
-        if(email.value.includes(arroba)){
+let emailV = email.value
+emailV.toLowerCase()
+    if(emailV.endsWith(dominioBr) || (emailV.endsWith(dominioCom))){
+        if(emailV.includes(arroba)){
         return true
     } else{
         return false
