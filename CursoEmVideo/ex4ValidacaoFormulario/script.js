@@ -15,12 +15,8 @@ function salvar(){
         dados[cont1] = {nome: nomeEntrada.value, numero: numeroEntrada.value, email: emailEntrada.value}
         cont1++/
         console.log(dados)
-        console.log(cont1)
 
     }else{
-        console.log(validarEmail())
-        console.log(validarNome())
-        console.log(validarNumero())
         alert('Dados invalidos')
     }
     
@@ -69,7 +65,8 @@ const dominioCom = '.com'
 const dominioBr = '.br'
 const arroba = '@'
 let emailV = email.value
-emailV.toLowerCase()
+
+
     if(emailV.endsWith(dominioBr) || (emailV.endsWith(dominioCom))){
         if(emailV.includes(arroba)){
         return true
