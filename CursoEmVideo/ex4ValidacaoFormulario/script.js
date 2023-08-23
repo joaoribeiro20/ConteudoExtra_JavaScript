@@ -29,8 +29,9 @@ function salvar(){
 
 //verifica se o campos de numero nao esta vazio e verifica se nao é uma letra ou texto
 function validarNumero(numero){
-    
-    if(numero.value != '' && parseInt(numero.value)){
+    //let teste = parseInt(numero.value)
+    //console.log(teste)
+    if(numero.value != '' ){
         return true
     }else {
         return false
