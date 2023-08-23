@@ -74,7 +74,7 @@ function validarNome(nome){
 function validarEmail(email){
 
 let emailV = email.value
-let regexv = /\S+@\S+\.+[c]+[o]+[m]|[b]+[r]/ig
+let regexv = /\S+@\S+\.+[c]{1}[o]{1}[m]{1}|[b]{1}[r]{1}/ig
 
  console.log(`validação email: ${!!regexv.test(emailV)}`)
     if(!!regexv.test(emailV)){
