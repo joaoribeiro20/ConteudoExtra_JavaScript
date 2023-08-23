@@ -29,8 +29,10 @@ function salvar(){
 
 //verifica se o campos de numero nao esta vazio e verifica se nao é uma letra ou texto
 function validarNumero(numero){
+    const regex = /[a-z]/i
+    console.log(!regex.test(numero.value))
     
-    if(numero.value != '' && parseInt(numero.value)){
+    if(numero.value != '' && !regex.test(numero.value)){
         return true
     }else {
         return false
@@ -65,7 +67,8 @@ const dominioCom = '.com'
 const dominioBr = '.br'
 const arroba = '@'
 let emailV = email.value
-
+var re = /\S+@\S+\.\S+/
+console.log(re.test(emailV))
 
     if(emailV.endsWith(dominioBr) || (emailV.endsWith(dominioCom))){
         if(emailV.includes(arroba)){
