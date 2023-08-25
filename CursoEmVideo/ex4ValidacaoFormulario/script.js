@@ -42,7 +42,7 @@ function salvar(){
 //verifica se o campos de numero nao esta vazio e verifica se nao é uma letra ou texto
 function validarNumero(numero){
     let regexv = /[a-z]/ig
-    if(numero.value != '' && !regexv.test(numero.value)){
+    if(regexv.match(numero.value) ){
         console.log(`validação numero: ${!regexv.test(numero.value)}`)
         return true
     }else {
