@@ -24,7 +24,7 @@ const init=()=>{
     carro2.style="position:relative;left:300px"
     telaMax=window.innerWidth
     console.log(telaMax)
-    anima=setInterval(move,15,10)
+    anima=setInterval(move,10,1)
    
 }
 const move=(dir)=>{
@@ -49,7 +49,7 @@ if(pos1 == 0){
     }
 }
 
-carro.addEventListener('mouseenter', entrar)
+carro.addEventListener('click', entrar)
  function entrar(){
     carro.style.width = '350px'
     carro.style.height = '160px'
