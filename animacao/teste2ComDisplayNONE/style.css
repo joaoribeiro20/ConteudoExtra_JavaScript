@@ -1,0 +1,10 @@
+.readme{
+   display: none;
+
+}  
+button{
+    cursor: pointer;
+    border:none!important;
+    background-color: white!important;
+    
+}
