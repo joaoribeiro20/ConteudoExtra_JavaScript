@@ -22,7 +22,7 @@ elementoImg[i] = document.createElement('img')
 elementoImg[i].setAttribute('src', img[i])
 elementoImg[i].setAttribute('class', 'imgF')
 area.appendChild(elementoImg[i])
-telaMax=window.innerWidth
+
 console.log(`tamanho da tela : ${telaMax}`)
 elementoImg[i].style="position:relative;left:-100px"
 if (!intervalID) {
@@ -46,9 +46,6 @@ function myCallback(pos, elementoImg){
     }
     
 }
-
-
-
 
 window.onload=init()
 
