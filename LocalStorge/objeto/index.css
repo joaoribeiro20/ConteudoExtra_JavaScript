@@ -1,0 +1,33 @@
+main{
+    display: flex;
+    
+    
+}
+.navBarra{
+    display: none;
+}
+
+.divMenu{
+    height: 1px;
+    width: 1px;
+    border-radius: 5%;
+    background-color: rgb(0, 0, 0);
+    padding: 2%;
+    
+  
+}
+
+a{
+    color: brown;
+
+}
+a:hover{
+    color: rgb(0, 0, 0);
+    font-size: large;
+}
+
+
+.divCadastro{
+  width: 550px;
+  
+}
