@@ -15,6 +15,7 @@ variavel = setInterval(função, intervaloDeTempo, parametroDaFunçãoCasoAfunç
 
 const carro = document.getElementById('carro')
 const carro2 = document.getElementById('carro2')
+const carro3 = document.getElementById('carro3')
 
 let anima = null 
 let telaMax
@@ -22,7 +23,8 @@ let telaMax
 const init=()=>{
     carro.style="position:relative;left:0px"
     carro2.style="position:relative;left:300px"
-    telaMax=window.innerWidth
+    carro3.style="position:relative;left:300px"
+    telaMax=window.innerWidth - 
     console.log(telaMax)
     anima=setInterval(move,15,10)
    
