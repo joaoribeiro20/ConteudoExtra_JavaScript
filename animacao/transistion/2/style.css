@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    border: 2px solid black;
+    padding: 5%;
+}
+.elemento{
+    background-color: crimson;
+    width: 150px;
+    height: 150px;
+   
+    transition-timing-function:  ease;
+  /*   transition-duration: 2s;
+    transition-delay: 1s; */
+}

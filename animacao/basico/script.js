@@ -13,71 +13,50 @@ variavel = setInterval(função, intervaloDeTempo, parametroDaFunçãoCasoAfunç
 
 
 
-const carro = document.getElementById('carro')
+/* const carro = document.getElementById('carro')
 const carro2 = document.getElementById('carro2')
+<<<<<<< HEAD
 const carro3 = document.getElementById('carro3')
+=======
+const carro3 = document.getElementById('carro3') */
+const div = document.getElementById('divCarro')
+>>>>>>> 0f364fd6b6a933520542e42ca0a709920d16164c
 
 let anima = null 
+let anima2 = null 
+let anima3 = null 
 let telaMax
+let pos = 0
+
 
 const init=()=>{
+<<<<<<< HEAD
     carro.style="position:relative;left:0px"
     carro2.style="position:relative;left:300px"
     carro3.style="position:relative;left:300px"
     telaMax=window.innerWidth - 
+=======
+    div.style="position:relative;left:0px"
+
+    telaMax=window.innerWidth
+>>>>>>> 0f364fd6b6a933520542e42ca0a709920d16164c
     console.log(telaMax)
-    anima=setInterval(move,15,10)
+    anima=setInterval(move,10,2)
+   
    
 }
 const move=(dir)=>{
-let pos1 = 0
-let pos2 =0
-if(pos1 == 0){
-    pos1=parseInt(carro.style.left)
-    pos2=parseInt(carro2.style.left)
-    pos1+=1*dir
-    pos2+=1*dir
-    carro.style=`position:relative;left:${pos1}px`
-    carro2.style=`position:relative;left:${pos2}px`
-    //console.log(pos)
-    if(pos1 > telaMax){
-    console.log(pos1)
-    carro.style=`position:relative;left:${-200}px`
-    pos1 = 0
-    }
-    if(pos2 > telaMax){
-        carro2.style=`position:relative;left:${-200}px`
-    }
-    }
+if(pos <= telaMax){
+    pos=parseInt(div.style.left)
+    pos+=1*dir
+    //console.log(`valor do pos: ${pos}`)
+    div.style=`position:relative;left:${pos}px`
+}else{
+    pos = -600
+    div.style=`position:relative;left:${pos}px`
+ }
+ 
+
 }
 
-carro.addEventListener('mouseenter', entrar)
- function entrar(){
-    carro.style.width = '350px'
-    carro.style.height = '160px'
-    carro.style.background = 'rgb(247, 255, 202)'
-    clearInterval(anima)
-  
-}
-carro.addEventListener('mouseout', sair)
-function sair(){
-    
-    carro.style.background = 'blue'
-    anima=setInterval(move,15,1)
-}
-
-carro2.addEventListener('mouseenter', entrar2)
- function entrar2(){
-    carro2.style.width = '350px'
-    carro2.style.height = '160px'
-    carro2.style.background = 'rgb(247, 255, 202)'
-    clearInterval(anima)
-  
-}
-carro2.addEventListener('mouseout', sair2)
-function sair2(){
-    
-    carro2.style.background = 'blue'
-    anima=setInterval(move,15,1)
-}
 window.onload=init

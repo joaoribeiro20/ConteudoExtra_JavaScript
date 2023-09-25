@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 
 
 .carro{
@@ -18,9 +22,9 @@
 
 .teste{
     background-color: rgb(0, 21, 83);
- padding: 5%;
+ /* padding: 5%; */
  display: flex;
- 
+ gap: 15vh;
  align-items: center;
 
 }
