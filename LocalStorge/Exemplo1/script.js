@@ -19,6 +19,17 @@ function salvarLocal(){
     novoAluno = novoAluno + 1
 } 
 }
+function init(){
+    console.log('teste')
+    
+    let locala = localStorage.getItem(0)
+    let nome = document.createElement("p")
+    nome.innerText = `bem vindo ${locala} seu id é ${novoAluno}`
+    document.body.appendChild(nome)
+}
+
+
+
 
 function verificarNome(){
     let verificar //variavel que vai amazenar o nome a ser pesquisado
@@ -54,13 +65,6 @@ function excluir(){
         nome.innerText = `o nome do id ${CampoExcluir.value} nao foi encontrado`
         document.body.appendChild(nome)
     }
-    
-      
-
-      
-    
-    
-}
-
-
    
+}
+window.onload=init()
