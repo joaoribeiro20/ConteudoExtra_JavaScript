@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+}
+
+.elemento {
+    width: 15vh;
+    height: 15vh;
+   
+   
+  }
+  
+  .um {
+    background-color: red;
+    left: 20px;
+    top: 20px;
+  
+  }
+  
+  .dois {
+    background-color: blue;
+    left: 50px;
+    top: 50px;
+    width: 50vh;
+    height: 50vh;
+    display: none;
+    z-index: 1; 
+    position: absolute;
+    align-items: center;
+  }
+  

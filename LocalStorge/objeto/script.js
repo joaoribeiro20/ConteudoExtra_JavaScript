@@ -1,3 +1,52 @@
+let CampoNome = document.querySelector('.CampoNome')
+let CampoEmail =document.querySelector('.CampoEmail')
+let CampoIdade = document.querySelector('.CampoIdade')
+let CampoTurma=document.querySelector('.CampoTurma')
+const minhaListaDeObjetos = [];
+let key_primary=0
+
+
+function init(){
+    const jsonStringRecuperada = localStorage.getItem('minhaLista');
+    
+    // 4. Converta a string JSON de volta para um array de objetos
+    const listaRecuperada = JSON.parse(jsonStringRecuperada);
+    minhaListaDeObjetos = listaRecuperada
+}
+
+function salvar(){
+
+    minhaListaDeObjetos[key_primary]={
+        nome:CampoNome.value,
+        email:CampoEmail.value,
+        idade:CampoIdade.value,
+        turma:CampoTurma.value,
+        id:key_primary
+    }
+
+    console.log(minhaListaDeObjetos)
+
+    const jsonString = JSON.stringify(minhaListaDeObjetos);
+  
+    // 2. Armazene a string JSON no localStorage
+    localStorage.setItem('minhaLista', jsonString);
+     console.log(jsonString); 
+    // Para recuperar a lista de objetos do localStorage:
+    
+    // 3. Recupere a string JSON do localStorage
+    const jsonStringRecuperada = localStorage.getItem('minhaLista');
+    
+    // 4. Converta a string JSON de volta para um array de objetos
+    const listaRecuperada = JSON.parse(jsonStringRecuperada);
+    
+    // Agora, listaRecuperada conterá seu array de objetos original
+    console.log(listaRecuperada); 
+    key_primary=key_primary+1
+}
+
+
+
+
 let divMenu = document.getElementById("divMenu")
 let nav = document.getElementById("navBarra")
 
@@ -42,3 +91,5 @@ let esconderMenu = () => {
 divMenu.addEventListener("mouseover", exibirMenu)
 
 divMenu.addEventListener("mouseout", esconderMenu)  
+
+window.onload= init()

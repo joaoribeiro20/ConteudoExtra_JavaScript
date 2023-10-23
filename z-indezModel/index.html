@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="elemento um">Elemento 1 <button id="btn">adicionar</button></div>
+    <main>
+        <form action="">
+            <label for="">nome</label>
+            <input type="text">
+        </form>
+    </main>
+<div class="elemento dois">Elemento 2
+    <button id="btnS" color="green">salvar</button>
+</div>
+
+
+<script>
+    let btn = document.querySelector('#btn')
+    let btnS = document.querySelector('#btnS')
+    let model = document.querySelector('.dois')
+    let main = document.querySelector('.um')
+    btn.addEventListener('click',()=>{
+        console.log('legal')
+        model.style.display = 'flex'
+        main.style.opacity = '50%'
+    })
+
+    btnS.addEventListener('click',()=>{
+        model.style.display = 'none'
+        main.style.opacity = '100%'
+    })
+</script>
+</body>
+</html>
